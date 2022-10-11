@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Welcome from "./pages/Welcome";
-import Login from "./pages/Login";
 import Main from "./pages/Main";
 
 import standby from "./memes/default.jpeg";
@@ -43,9 +42,8 @@ function App() {
       <div className="text-gray-700 h-screen w-screen overflow-hidden">
         <Routes>
           <Route exact path="/" element={<Welcome />} />
-          <Route path="login" element={<Login />} />
           <Route
-            path="home"
+            path="hear-me-out"
             element={<Main memes={memes} standby={standby} />}
           />
         </Routes>

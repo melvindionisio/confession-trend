@@ -109,7 +109,7 @@ function Main({ memes, standby }) {
   };
 
   const handleClose = () => {
-    setPrompt("Too late.. bawal na mag backout HAHHA");
+    setPrompt("Too late.. bawal na mag backout.");
   };
 
   useEffect(() => {
@@ -144,8 +144,11 @@ function Main({ memes, standby }) {
           <p className="text-sm font-semibold text-red-500">{prompt}</p>
           <img src={randomSad} className="h-36" alt="sad" />
           <div className="px-4 py-8 bg-gray-100 w-full shadow-inner">
-            <p className="text-center  font-bold">
-              Hi Roj! Kung ang english ng baka ay cow.. pwede bang manligaw? 😅
+            <p className="text-center  font-bold text-2xl">
+              Gusto kita, matagal na.
+            </p>
+            <p className="text-center  mt-2  font-bold">
+              I just wanted to ask if you like me too?
             </p>
           </div>
           <div className="flex justify-center space-x-5 w-full font-bold">
@@ -154,7 +157,7 @@ function Main({ memes, standby }) {
               onClick={handleHindi}
               className="uppercase px-4 py-2 transition inline-flex h-10 shadow-md transform active:scale-110 border-2 border-red-500 text-red-500 bg-white"
             >
-              Hindi
+              no
             </button>
             <div className="flex flex-col items-center">
               <button
@@ -162,7 +165,7 @@ function Main({ memes, standby }) {
                 onClick={handleOo}
                 className="uppercase px-4 py-2 transition transform shadow-md active:scale-110 bg-green-500  text-green-50 "
               >
-                Oo
+                yes
               </button>
               {showArrow ? (
                 <img src={arrow} className="h-14 mt-2 " alt="" />
@@ -181,7 +184,7 @@ function Main({ memes, standby }) {
             <img src={newmess} alt="message-icon" />
           </div>
           <div>
-            <p className="text-center font-bold">New message for Rojean</p>
+            <p className="text-center font-bold">New message for you</p>
             <p className=" text-center text-sm mt-1">Tap to open</p>
           </div>
         </div>
@@ -252,7 +255,7 @@ function Main({ memes, standby }) {
           ref={six}
           className="opacity-0 text-lg font-semibold p-1 px-3 bg-white z-100 absolute bottom-20 border text-red-600  shadow-lg"
         >
-          wavvyuuuu mwuah 💌{" "}
+          send me a message 💌{" "}
         </p>
       </div>
     </div>

@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import profile from "../rojean.jpg";
+import messenger from "../memes/newmessage.mp3";
+import stickman from "../memes/smile.jpg";
 
 function Welcome() {
   const [pageTransition, setPageTransition] = useState(false);
   const [cardTransition, setCardTransition] = useState(false);
   const [greetTransition, setGreetTransition] = useState(false);
-  const [imageTransition, setImageTransition] = useState(false);
   const [btnTransition, setBtnTransition] = useState(false);
+
+  const [audio] = useState(new Audio(messenger));
+  const handleReady = () => {
+    audio.play();
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,7 +22,6 @@ function Welcome() {
         setTimeout(() => {
           setGreetTransition(true);
           setTimeout(() => {
-            setImageTransition(true);
             setTimeout(() => {
               setBtnTransition(true);
             }, 600);
@@ -34,6 +38,9 @@ function Welcome() {
           : "transform -translate-x-full opacity-50 duration-500 transition font-quicksand h-screen w-screen flex items-center justify-center bg-sky-50"
       }`}
     >
+      {/*
+
+          */}
       <div
         className={`${
           cardTransition
@@ -48,30 +55,29 @@ function Welcome() {
               : "pb-5 border-b md:border-b-0   md:pr-3 transform translate-y-32 opacity-0 text-center text-lg mb-10 transition duration-500"
           }`}
         >
-          <span className="text-left text-xl  block">Hi Rojean,</span>
-          <span className="text-2xl text-left block">Welcome to my life!</span>
-          <span className="block text-left text-red-500">charot.</span>
+          <span className="text-left text-xl  block">
+            Hi! hope you're doing fine.
+          </span>
+          <span className="text-2xl mt-3 font-semibold text-left block">
+            May gusto akong sabihin sa'yo
+          </span>
+          <span className="block mt-4 text-left text-green-500">
+            actually sobrang tagal na,
+            <br /> and I guess I'm ready now.
+          </span>
         </p>
-        <div className="flex flex-col items-center">
-          <div
-            className={`${
-              imageTransition
-                ? "opacity-100 h-32 w-32 transform scale-100 rounded-full bg-gray-200 mb-6 duration-300 overflow-hidden ring-1 border-4 border-white ring-orange-300"
-                : "opacity-0 h-32 w-32  transform scale-50 rounded-full bg-gray-200 mb-6 duration-300 overflow-hidden ring-1 border-4 border-white ring-orange-300"
-            }`}
-          >
-            <img src={profile} alt="rojean.img" className="w-full h-full" />
-          </div>
-
-          <Link to="/login">
+        <div className="flex gap-4 flex-row md:flex-col items-center">
+          <img src={stickman} className="h-24 " alt="" />
+          <Link to="/hear-me-out">
             <button
+              onClick={handleReady}
               className={`${
                 btnTransition
-                  ? "opacity-100 px-4 py-2 font-semibold text-sm text-sky-100 bg-sky-500 uppercase rounded-md duration-300 shadow-md"
-                  : "opacity-0 px-4 py-2 font-semibold text-sm text-sky-100 bg-sky-500 uppercase rounded-md duration-300 shadow-md"
+                  ? "opacity-100 px-4 py-2 font-semibold text-sm text-pink-100 bg-pink-600 uppercase rounded-md duration-300 shadow-md"
+                  : "opacity-0 px-4 py-2 font-semibold text-sm text-pink-100 bg-pink-600 uppercase rounded-md duration-300 shadow-md"
               }`}
             >
-              Continue as <span className="font-bold">Rojean</span>
+              Click me{" "}
             </button>
           </Link>
         </div>
