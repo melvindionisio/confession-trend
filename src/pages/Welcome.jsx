@@ -51,33 +51,33 @@ function Welcome() {
         <p
           className={`${
             greetTransition
-              ? "pb-5 border-b md:border-b-0  md:pr-3 transform translate-y-0 opacity-100 text-center text-lg mb-10 transition duration-500"
-              : "pb-5 border-b md:border-b-0   md:pr-3 transform translate-y-32 opacity-0 text-center text-lg mb-10 transition duration-500"
+              ? "pb-5 border-b md:border-b-0 font-semibold  md:pr-3 transform translate-y-0 opacity-100 text-center text-lg mb-10 transition duration-500"
+              : "pb-5 border-b md:border-b-0   md:pr-3 transform translate-y-32 opacity-0 text-center font-semi-bold text-lg mb-10 transition duration-500"
           }`}
         >
-          <span className="text-left text-xl  block">
-            Hi! hope you're doing fine.
+          <span className="text-left text-xl font-normal  block">
+            Hi <span className="text-pink-500 font-semibold ">Missy</span>! hope
+            you're doing fine.
           </span>
           <span className="text-2xl mt-3 font-semibold text-left block">
             May gusto akong sabihin sa'yo
           </span>
-          <span className="block mt-4 text-left text-green-500">
-            actually sobrang tagal na,
-            <br /> and I guess I'm ready now.
+          <span className="block mt-4 font-normal text-left">
+            I guess I'm ready now.
           </span>
         </p>
-        <div className="flex gap-4 flex-row md:flex-col items-center">
-          <img src={stickman} className="h-24 " alt="" />
+        <div className="flex gap-4 flex-row justify-between md:flex-col items-center">
+          <img src={stickman} className="h-24 rounded-full" alt="" />
           <Link to="/hear-me-out">
             <button
               onClick={handleReady}
               className={`${
                 btnTransition
-                  ? "opacity-100 px-4 py-2 font-semibold text-sm text-pink-100 bg-pink-600 uppercase rounded-md duration-300 shadow-md"
-                  : "opacity-0 px-4 py-2 font-semibold text-sm text-pink-100 bg-pink-600 uppercase rounded-md duration-300 shadow-md"
+                  ? "opacity-100 px-4 py-2 font-semibold text-sm text-sky-100 bg-sky-600 uppercase rounded-md duration-300 shadow-md"
+                  : "opacity-0 px-4 py-2 font-semibold text-sm text-sky-100 bg-sky-600 uppercase rounded-md duration-300 shadow-md"
               }`}
             >
-              Click me{" "}
+              Continue
             </button>
           </Link>
         </div>

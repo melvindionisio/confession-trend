@@ -145,7 +145,7 @@ function Main({ memes, standby }) {
           <img src={randomSad} className="h-36" alt="sad" />
           <div className="px-4 py-8 bg-gray-100 w-full shadow-inner">
             <p className="text-center  font-bold text-2xl">
-              Gusto kita, matagal na.
+              Gusto na ata kita, matagal na.
             </p>
             <p className="text-center  mt-2  font-bold">
               I just wanted to ask if you like me too?
@@ -198,7 +198,7 @@ function Main({ memes, standby }) {
         }`}
         ref={overlay}
       >
-        <p className="text-lg font-semibold p-2 px-3 bg-white z-100 border text-red-500 mb-4 uppercase">
+        <p className="text-lg font-semibold p-2 px-3 bg-white z-100 border text-red-500 mb-4 md:mt-10 uppercase">
           Yieeeeeee! 🫶🖤
         </p>
 
@@ -240,12 +240,12 @@ function Main({ memes, standby }) {
           alt=""
         />
 
-        <video width="720" height="720" ref={vidRef}>
+        <video width="720" className="md:h-80" height="720" ref={vidRef}>
           <source src={uwu} type="video/mp4" />
         </video>
 
         <div
-          className=" active:scale-110 transition transform mt-10 "
+          className=" active:scale-110 transition transform mt-10 md:mt-2 "
           onClick={handleCloseVid}
         >
           <img src={closeIcon} className="h-10 w-10" alt="close" />
@@ -255,7 +255,7 @@ function Main({ memes, standby }) {
           ref={six}
           className="opacity-0 text-lg font-semibold p-1 px-3 bg-white z-100 absolute bottom-20 border text-red-600  shadow-lg"
         >
-          send me a message 💌{" "}
+          Thank you! 💌{" "}
         </p>
       </div>
     </div>
